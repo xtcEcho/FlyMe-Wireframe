@@ -1,0 +1,340 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+}
+
+
+
+nav{
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(211, 211, 211);
+}
+
+nav #hamburger {
+    width: 24px;
+    height: 24px; 
+    background-color: rgb(184, 184, 184);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li, nav button {
+    display: inline;
+    font-size: 16px;
+}
+
+main{
+    width: 100%;
+}
+
+#landing-container {
+    display: flex;
+}
+
+.container {
+    width: 100%;
+    margin-top: 60px;
+}
+/* ##############home-page################## */
+
+#home-container .post {
+    background-color: rgb(250, 214, 214);
+    margin-top: 10px;
+    padding: 10px;
+    min-height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.post-title{
+    height: 50%;
+}
+
+.post-title h3{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.post-info {
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-top: auto;
+}
+
+#home-container .post-profile, #home-container .post-rating {
+    width: 50%;
+}
+
+/* ###############artile page################# */
+#flight-rating {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#flight-rating h3{
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#flight-rating #score {
+    width: 28%;
+}
+
+#flight-rating #pros, #flight-rating #cons {
+    width: 34%
+}
+
+
+
+#flight-rating h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* #############login page########## */
+#member-container {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#member-container ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#member-container li {
+    display: inline-block;
+}
+
+#member-container #log-in {
+    margin-right: 20px;
+    text-decoration: underline;
+}
+
+/* ###########write page################## */
+#input-form > input, #input-form textarea {
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 599px){
+    body {
+        text-align: left;
+        font-size: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    nav {
+        padding-left: 16px;
+        padding-right: 16px;
+        height: 40px;
+    }
+
+    nav b {
+        font-size: 20px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    #landing-container {
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    #landing-container h2 {
+        font-size: 28px;
+        font-weight: 300;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    /* ##############home-page################## */
+
+    #filter-wrapper{
+        width: 100%;
+        display: flex;
+    }
+
+    #filter-wrapper .filter {
+       flex: 1;
+       height: 30px;
+    }
+
+    #post-wrapper {
+        width: 100%;
+    }
+
+    /* ##################article-page################### */
+
+    #flight-rating > div {
+        /* max-width: 160px; */
+        padding: 5px;
+    }
+
+}
+
+@media screen and (min-width: 600px){
+    body {
+        text-align: left;
+        font-size: 16px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    nav {
+        padding-left: 24px;
+        padding-right: 24px;
+        height: 60px;
+    }
+
+    nav b {
+        font-size: 24px;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: auto;
+    }
+
+    nav li:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    nav #hamburger {
+        display: none;
+    }
+
+    #landing-container {
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    #landing-container h2 {
+        font-size: 36px;
+        font-weight: 300;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    /* ##############home-page################## */
+    #home-container {
+        display: flex;
+        flex-direction: row;
+    }
+    #home-container #filter-wrapper {
+        min-width: 180px;
+        width: 35%;
+        /* flex: 1; */
+        margin-right: 10px;
+    }
+    #home-container .filter{
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    /* #############article-page############## */
+    #article-container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    #flight-rating > div {
+        max-width: 260px;
+    }
+
+    /* ##############write page########## */
+    #input-container {
+        margin-top: 80px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+}
+
+@media screen and (min-width: 900px) {
+    body {
+        font-size: 18px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    
+    #landing-container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    #landing-container h2 {
+        font-size: 48px;
+    }
+
+    /* ##############home-page################## */
+    #home-container #filter-wrapper {
+        max-width: 200px;
+        margin-right: 10px;
+    }
+    #home-container #post-wrapper {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+    }
+    #home-container .post{
+        width: 49%;
+        display: inline-block;
+    }
+    
+    /* ##############article-page################### */
+    #article-container{
+        width: 80%;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #flight-rating > div {
+        max-width: 300px;
+    }
+
+    /* #############write-page############### */ 
+    #input-container {
+        margin-top: 80px;
+        width: 80%;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

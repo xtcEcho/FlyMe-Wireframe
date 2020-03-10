@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>FlyMe write page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css"> -->
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+
+    <body>
+        <nav>
+            <b>FlyMe</b>
+            <div id='hamburger'></div>
+            <ul>
+                <li>Reviews</li>
+                <li>Post</li>
+                <li><button>Account</button></li>
+            </ul>
+        </nav>
+        <main id='input-container' class="container">
+            <form id="input-form">
+                <input placeholder="Title" id="input-title" type="text" />
+                <div id="input-filter-wrapper">
+                    <button class='input-filter' id='input-airline'>Airline</button>
+                    <button class='input-filter' id='input-class'>Class</button>
+                </div>
+                <p><span><input id="input-score" type="number" placeholder="Score"/></span>/100</p>
+                <input placeholder="Pros" id="input-pros" type="text" />
+                <input placeholder="Cons" id="input-cons" type="text" />
+                <textarea placeholder="Share with us your thoughts..." id="input-detail" type="text" cols="30" rows="5"></textarea>
+                <button type='submit'>Submit</button>
+            </form>
+        </main>
+    </body>
+</html>
